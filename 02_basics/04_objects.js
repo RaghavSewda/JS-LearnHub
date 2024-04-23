@@ -62,3 +62,36 @@ users[1].email
 // console.log(Object.entries(tinderUser));
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+const course = {
+    coursename: 'xy',
+    price: '0',
+    courseInstructor: 'Raghav'
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course;
+
+// console.log(courseInstructor);
+// console.log(instructor);
+
+
+//for React
+// const navbar = ({company}) => {
+
+// }
+// navbar(company = 'raghav')
+
+//JSON
+// {
+//     'name': 'raghav',
+//     'coursename': 'xy',
+//     'price': 'free'
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
