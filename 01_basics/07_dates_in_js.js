@@ -30,3 +30,5 @@ let nDate = new Date()
 // ${newDate.getDate()} and the time
 
 nDate.toLocaleString('default', {weekday: 'long',})
+
+// nDate.setFullYear(2017);
