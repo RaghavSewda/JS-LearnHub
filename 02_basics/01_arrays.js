@@ -36,3 +36,19 @@ console.log('B ',myArr);
 const myn2 = myArr.splice(1,3);
 console.log(myn2);
 console.log('C ',myArr);
+
+
+
+
+
+
+
+
+// PWM
+
+
+// Adding elements -> push,unshift,splice
+
+// finding elements(Primitives) -> indexOf(),lastIndexOf(), includes(), 2nd parameter -> from index
+
+// finding elements (Reference Types) -> javascript array "find" mdn 
