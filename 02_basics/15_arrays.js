@@ -47,3 +47,25 @@ const items = numbers
     .map(obj => obj.value);
 
 console.log(items);
+
+
+
+
+
+
+
+// Reducing an Array
+
+let sum = 0;
+// a = 0; c = 1 => a = 1
+// a = 1; c = -1 => a = 0
+// a = 0; c = 2 => a = 2
+// a = 2; c = 3 => a = 5
+sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0);
+sum = numbers.reduce(
+    (accumulator,currentValue) => accumulator + currentValue
+);
+
+console.log(sum);
