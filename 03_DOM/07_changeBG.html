@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script src="app.js"></script>
+  </body>
+  <script>
+    const randomColor = function () {
+    const hex = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += hex[parseInt(Math.floor(Math.random() * 16))];
+    }
+    return color;
+  };
+  
+  let intervalID;
+  function startChanging() {
+    intervalID = setInterval(changeColor, 1000);
+    function changeColor() {
+      document.body.style.background = randomColor();
+    }
+  }
+  function stopChanging() {
+    clearInterval(intervalID);
+  }
+  
+  document.querySelector('#start').addEventListener('click', startChanging);
+  document.querySelector('#stop').addEventListener('click', stopChanging);
+  
+  </script>
+</html>
