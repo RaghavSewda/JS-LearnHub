@@ -29,7 +29,7 @@ buttons.forEach(function (button) {
 
 
 
-## Project 2 (BMI calculator)
+## Project 2 (BMI Calculator)
 [click here](https://stackblitz.com/edit/dom-projects-sil-t716gc?file=2-BMICalculator%2Fapp.js)
 
 ```javascript
@@ -59,7 +59,7 @@ form.addEventListener('submit',function(event){
 
 
 
-## Project 3
+## Project 3 (Digital Clock)
 [click here](https://stackblitz.com/edit/dom-projects-sil-t716gc?file=3-DigitalClock%2Fapp.js)
 
 ```javascript
@@ -76,7 +76,7 @@ setInterval(function () {
 
 
 
-## Project 4 (Guess the number)
+## Project 4 (Guess the Number)
 [click here](https://stackblitz.com/edit/dom-projects-sil-5iiefr?file=4-GuessTheNumber%2Fapp.js)
 
 ```javascript
@@ -176,5 +176,71 @@ function newGame(){
     playGame = true;
   })
 }
+
+```
+
+## Project 5 (Key Identifier)
+
+[click here](https://stackblitz.com/edit/dom-project-sil-2sacsy?file=5-keyboard%2Fapp.js)
+
+```javascript
+
+
+const insert = document.querySelector('#insert');
+
+window.addEventListener('keydown', (event) => {
+  insert.innerHTML = `
+    <div class = 'color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>KeyCode</th>
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${event.key === ' ' ? 'space' : event.key}</td>
+      <td>${event.keyCode}</td> 
+      <td>${event.code}</td>
+    </tr>
+  </table>
+    </div>
+  `;
+});
+
+
+```
+
+
+## Project 6 (Unlimited Colors)
+
+[click here](https://stackblitz.com/edit/dom-project-sil-gnermn?file=6-unlimitedColors%2Fapp.js)
+
+```javascript
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[parseInt(Math.floor(Math.random() * 16))];
+  }
+  return color;
+};
+
+let intervalID;
+const startChanging = function () {
+  if (!intervalID) {
+    intervalID = setInterval(changeColor, 1000);
+  }
+  function changeColor() {
+    document.body.style.background = randomColor();
+  }
+};
+const stopChanging = function () {
+  clearInterval(intervalID);
+  intervalID = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChanging);
+document.querySelector('#stop').addEventListener('click', stopChanging);
 
 ```
